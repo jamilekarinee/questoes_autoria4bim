@@ -1,0 +1,147 @@
+// MAIUSCULO E MINUSCULO 
+/*function Maiusculo(palavra) {
+    return palavra.toUpperCase();
+}
+
+const Minusculo = function (palavra) {
+    return palavra.toLowerCase();
+}
+
+console.log(Maiusculo('jamile karine'));
+console.log(Minusculo('jamile karine'));
+
+const MinOUMaiusc = (palavra1, palavra2) => palavra1 + palavra2; 
+
+console.log(MinOUMaiusc('jamile', 'JAMILE'));
+*/ 
+
+
+
+
+
+/* PAR E IMPAR 
+// Escreva uma função que use a função de array filter junto com uma arrow function para
+// criar um novo array contendo apenas os números pares de um array dado. 
+function Par (numeros){
+    return numeros.filter((numeros) => numeros%2 == 0)
+    }
+console.log(Par([1,2,3,4,5,6,7,8]))
+
+
+function Impar (numeros) {
+    return numeros.filter((numeros) => numeros%2 !=0 )
+}
+console.log(Impar([1,2,3,4,5,6,7,8]))
+*/
+
+
+
+
+// ALTURA E LARGURA | ÁREA 
+// 1. Crie uma função que aceite um objeto config como parâmetro, onde config tem
+// propriedades como largura e altura, e retorne a área. 
+/*
+function Area (config){
+    let {largura, altura} = config; 
+    return largura*altura; 
+}
+let config1 = {largura : 7, altura : 2}
+console.log(Area(config1)); 
+*/
+
+
+
+
+//ENDERECO 
+
+//Crie uma função que aceite um objeto endereco com propriedades como rua, cidade e
+// país, e retorne uma string formatada com essas informações.
+/* function End (endereco){
+    let {rua, cidade, pais} = endereco; 
+    return 'Rua: ' + rua + " | Cidade: " + cidade + " | País: " + pais; 
+}
+let end1 = {rua: "Avenida Brasil", cidade: "SP", pais: "BR"}
+console.log(End(end1)) 
+*/
+
+
+
+
+
+
+
+// Escreva uma função que aceite vários argumentos e retorne um array contendo esses argumentos. 
+/*
+function Argumentos (argumentos){
+    return argumentos; 
+}
+console.log(Argumentos([1,2,4,'eitaa', true]))
+*/
+
+
+
+// Crie uma função que utilize o operador spread para concatenar dois arrays.
+/*const Concatenar = (...arrays) => {
+    vetor = [...arrays[0], ...arrays[1]];
+    return vetor
+}
+console.log(Concatenar([1,2,4,5], [1,2,3,4]))
+*/ 
+
+
+
+
+//MÉDIA 
+// Escreva uma função que aceite um número variável de argumentos e retorne a média. 
+/* 
+const Media = (...numeros) => {
+    let soma = 0; 
+    for (let i=0; i<numeros.length; i++){
+        soma = soma + numeros[i]; 
+    }
+    return (soma)/numeros.length; 
+}
+console.log(Media(2,4,6,8)); 
+*/
+
+
+
+
+// CÓPIA DE UM OBJETO 
+/*function Copia (objeto){
+    return copia = {...objeto}
+}
+num1 = {nome: 'jk', idade: 18}
+console.log(Copia(num1));
+
+async function fetchProdutos (url){
+    const response = await fetch(url); 
+    console.log(response); 
+}
+fetchProdutos('www.youtube.br'); 
+*/
+
+
+
+
+
+// Utilize setTimeout para criar um temporizador que exiba uma contagem regressiva no
+// console a cada segundo, começando de 10. 
+const funcao = () => {
+    let contagem = 10;
+
+    function tick() {
+        console.log(contagem);
+        contagem = contagem -1;
+
+        if (contagem > 0) {
+            setTimeout(tick, 1000);
+        } else {
+            console.log("Concluído!");
+        }
+    }
+
+    tick();
+};
+
+funcao();

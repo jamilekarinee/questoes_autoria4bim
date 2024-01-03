@@ -1,0 +1,46 @@
+// Crie uma arrow function que receba um array de strings e retorne um novo array com o
+// comprimento de cada string. 
+/*
+function TamanhoArray(array){
+    for (let i=0; i<array.length; i++){
+        return array[i].length; 
+    }
+}
+
+let Array = ['Jamile', 'Escola', 'Autoria']; 
+console.log(TamanhoArray(Array)); 
+*/
+
+const comprimentosDasStrings = (arrayDeStrings) => arrayDeStrings.map(not => not.length);
+
+console.log(comprimentosDasStrings(["12","dfdf","44"]));
+
+
+const comprimento = (arraydestrings) => arraydestrings.map (number => number.length); 
+console.log(comprimento(["1234","tres","55"]));
+
+const comprimento_array = array1 => array1.map (array1 => array1.length);
+console.log(comprimento_array(["jamile","kkkk","6"]));
+
+
+// Escreva uma arrow function que calcule o quadrado de cada elemento em um array. 
+const Quadrado = numeros => numeros.map (numeros => numeros * numeros); 
+console.log(Quadrado([1,2,3,4,5,6,7,8,9,10]));
+
+
+async function funcao(){
+    console.log('solicitando') 
+    const simularatraso = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                let dados = {nome:'jk', idade: 18};
+                resolve(dados);     
+            }, 2000) 
+            reject(null); 
+        })
+    }
+    await simularatraso().then((dados) => {
+        console.log('Chegou o dado.', dados)
+    })
+}
+console.log(funcao())
